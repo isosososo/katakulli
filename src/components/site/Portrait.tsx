@@ -11,8 +11,9 @@ export function Portrait({
   eager?: boolean;
 }) {
   if (person.photo) {
+    const siteBase = import.meta.env.DEV ? "/" : "/katakulli/";
     const photoSrc = person.photo.startsWith("/")
-      ? `${import.meta.env.BASE_URL}${person.photo.slice(1)}`
+      ? `${siteBase}${person.photo.slice(1)}`
       : person.photo;
     return (
       <img
