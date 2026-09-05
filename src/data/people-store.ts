@@ -1,10 +1,14 @@
 import { cast as defaultCast, crew as defaultCrew, type Person } from "./people";
+import overrideData from "./people-overrides.json";
 
 const STORAGE_KEY = "katakulli-people-v1";
 const EVENT_NAME = "katakulli-data-updated";
 type StoreData = { cast: Person[]; crew: Person[] };
 
 function cloneDefaults(): StoreData {
+  if (Array.isArray(overrideData.cast) && Array.isArray(overrideData.crew) && (overrideData.cast.length || overrideData.crew.length)) {
+    return structuredClone(overrideData as StoreData);
+  }
   return { cast: structuredClone(defaultCast), crew: structuredClone(defaultCrew) };
 }
 
