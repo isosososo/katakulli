@@ -1,0 +1,296 @@
+{
+  "cast": [
+    {
+      "slug": "gökhan-bulut",
+      "name": "deneme",
+      "role": "Hacivat",
+      "photo": "/uploads/gökhan-bulut.jpg",
+      "short": "Kelime oyunlarının ustası, sahnenin aklı.",
+      "bio": [
+        "1978 yılında İstanbul'da doğdu. Tiyatroyla ilk tanışması lise yıllarında okul sahnesinde oldu; o günden bu yana sahneden hiç inmedi.",
+        "Yirmi yılı aşkın kariyerinde klasik ve çağdaş pek çok yapımda rol aldı. Özellikle geleneksel Türk tiyatrosu formlarını modern sahne diliyle buluşturan çalışmalarıyla tanınır."
+      ],
+      "education": [
+        "İstanbul Üniversitesi Devlet Konservatuvarı — Tiyatro Bölümü",
+        "Müjdat Gezen Sanat Merkezi — Oyunculuk Atölyesi"
+      ],
+      "stage": [
+        "Kanlı Nigar",
+        "Keşanlı Ali Destanı",
+        "Bir Delinin Hatıra Defteri",
+        "Cimri",
+        "Hisse-i Şayia"
+      ],
+      "other": [
+        "Yalnız Kurt (dizi)",
+        "Son Perde (kısa film)",
+        "Radyo Tiyatrosu — TRT"
+      ],
+      "katakulli": "Katakulli'de Hacivat karakteriyle sahnede. Aklı ve dili her şeyin üstünde tutan, planları çoğu zaman ters tepen ama asla pes etmeyen bir figürü sıcacık bir mizahla canlandırıyor.",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/"
+        }
+      ]
+    },
+    {
+      "slug": "ayse-demir",
+      "name": "Sena Aynacı",
+      "role": "Zenne",
+      "photo": "/src/assets/portrait-2.jpg",
+      "short": "Sahneyi bir bakışla dolduran güçlü bir varlık.",
+      "bio": [
+        "Ankara doğumlu. Konservatuvar eğitiminin ardından İstanbul'a yerleşti ve özel tiyatrolarda kısa sürede dikkat çeken bir kariyer inşa etti.",
+        "Fiziksel tiyatro ve müzikli oyunlardaki deneyimi, Katakulli'nin ritmik ve enerjik sahne diline önemli katkı sağlıyor."
+      ],
+      "education": [
+        "Hacettepe Üniversitesi Devlet Konservatuvarı — Oyunculuk"
+      ],
+      "stage": [
+        "Kösem Sultan",
+        "Ferhat ile Şirin",
+        "Lüküs Hayat",
+        "Zengin Mutfağı"
+      ],
+      "other": [
+        "Mahalle (dizi)",
+        "Perdenin Ardı (belgesel — anlatıcı)"
+      ],
+      "katakulli": "Zenne rolünde; oyunun tüm entrikalarının ortasında duran, herkesi parmağında oynatan ve seyirciyi kendine hayran bırakan karakteri canlandırıyor.",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/"
+        }
+      ]
+    },
+    {
+      "slug": "mehmet-kaya",
+      "name": "Mehmet Kaya",
+      "role": "Karagöz",
+      "photo": "/src/assets/portrait-3.jpg",
+      "short": "Kaba saba ama altın kalpli halk kahramanı.",
+      "bio": [
+        "1996 doğumlu genç oyuncu, üniversite yıllarında amatör topluluklarla başladığı yolculuğuna profesyonel sahnede devam ediyor.",
+        "Doğaçlama ve komedi alanındaki yeteneğiyle Katakulli kadrosunun en enerjik isimlerinden biri."
+      ],
+      "education": [
+        "Mimar Sinan Güzel Sanatlar Üniversitesi — Tiyatro Bölümü"
+      ],
+      "stage": [
+        "Kabare Katakulli",
+        "Sersem Kocanın Kurnaz Karısı",
+        "Hamlet"
+      ],
+      "other": [
+        "Gençlik (kısa film)",
+        "Reklam filmleri"
+      ],
+      "katakulli": "Karagöz karakteriyle sahnede; doğrudan, patavatsız ve her şeye rağmen sevilen halk adamını yepyeni bir enerjiyle yorumluyor.",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/"
+        }
+      ]
+    },
+    {
+      "slug": "fatma-sahin",
+      "name": "Fatma Şahin",
+      "role": "Kaynana",
+      "photo": "/src/assets/portrait-4.jpg",
+      "short": "Kırk yıllık sahne tecrübesi, bir bakışta anlam.",
+      "bio": [
+        "Türk tiyatrosunun duayen isimlerinden. 1980'lerden bu yana devlet ve şehir tiyatrolarında sayısız yapımda yer aldı.",
+        "Genç kuşaklara oyunculuk eğitimi vermeye devam ediyor."
+      ],
+      "education": [
+        "Ankara Devlet Konservatuvarı — Tiyatro Yüksek Bölümü"
+      ],
+      "stage": [
+        "Kral Lear",
+        "Üç Kız Kardeş",
+        "Cadı Kazanı",
+        "Yaşar Ne Yaşar Ne Yaşamaz"
+      ],
+      "other": [
+        "Aile Bağları (dizi)",
+        "Anne (sinema)"
+      ],
+      "katakulli": "Kaynana rolünde; tek bir kaş hareketiyle sahnenin dengesini değiştiren, mizahı zamanlamayla kuran bir usta performansı.",
+      "socials": []
+    },
+    {
+      "slug": "can-ozturk",
+      "name": "Can Öztürk",
+      "role": "Tuzsuz Deli Bekir",
+      "photo": "/src/assets/portrait-5.jpg",
+      "short": "Gürültülü, korkutucu ve komik.",
+      "bio": [
+        "Bursa doğumlu. Konservatuvar sonrası uzun yıllar İzmir'de sahne aldı, ardından İstanbul'a taşındı.",
+        "Karakter oyunculuğundaki derinliğiyle bilinir."
+      ],
+      "education": [
+        "Dokuz Eylül Üniversitesi — Sahne Sanatları"
+      ],
+      "stage": [
+        "Godot'yu Beklerken",
+        "Vişne Bahçesi",
+        "Tartuffe"
+      ],
+      "other": [
+        "Kuzey Yıldızı (dizi)"
+      ],
+      "katakulli": "Tuzsuz Deli Bekir olarak; sahneye her girişinde ortalığı karıştıran, herkesi korkutan ama kendisi en çok korkan kabadayıyı canlandırıyor.",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/"
+        }
+      ]
+    },
+    {
+      "slug": "elif-arslan",
+      "name": "Elif Arslan",
+      "role": "Çelebi",
+      "photo": "/src/assets/portrait-6.jpg",
+      "short": "Zarif, hayalperest ve daima âşık.",
+      "bio": [
+        "2000 doğumlu. Konservatuvarı yeni bitirmiş olmasına rağmen kısa sürede öne çıkan yeteneklerden.",
+        "Katakulli ilk büyük profesyonel prodüksiyonu."
+      ],
+      "education": [
+        "İstanbul Üniversitesi Devlet Konservatuvarı — Tiyatro"
+      ],
+      "stage": [
+        "Romeo ve Juliet (okul yapımı)",
+        "Küçük Prens"
+      ],
+      "other": [
+        "Bahar (kısa film)"
+      ],
+      "katakulli": "Çelebi rolünde; oyunun romantik ve naif kalbini temsil eden, şiirle konuşan genç âşığı canlandırıyor.",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/"
+        }
+      ]
+    },
+    {
+      "slug": "yeni-oyuncu",
+      "name": "Yeni Oyuncu",
+      "role": "Karakter",
+      "short": "Kısa tanıtım metni.",
+      "bio": [
+        "Biyografi metnini buraya yazın."
+      ],
+      "education": [],
+      "stage": [],
+      "other": [],
+      "katakulli": "Katakulli'deki rolü veya katkısı.",
+      "socials": []
+    }
+  ],
+  "crew": [
+    {
+      "slug": "yonetmen",
+      "name": "Gökhan Bulut",
+      "role": "Yönetmen",
+      "photo": "/uploads/yonetmen.png",
+      "short": "Geleneği bugünün sahnesine taşıyan bir vizyon.",
+      "bio": [
+        "Otuz yıllık sahne deneyimine sahip yönetmen. Geleneksel Türk tiyatrosu üzerine yaptığı çalışmalarla tanınıyor.",
+        "Katakulli, Karagöz–Hacivat ve orta oyunu geleneğini çağdaş bir kabare diliyle yeniden yorumlama fikrinden doğdu."
+      ],
+      "education": [
+        "Ankara Üniversitesi DTCF — Tiyatro Bölümü",
+        "Yüksek Lisans — Sahne Yönetimi"
+      ],
+      "stage": [
+        "Keşanlı Ali Destanı",
+        "Hürrem Sultan",
+        "Kanlı Nigar",
+        "Bir Yaz Gecesi Rüyası"
+      ],
+      "other": [
+        "Sahnenin Arkası (kitap)",
+        "Tiyatro Festivali Küratörlüğü"
+      ],
+      "katakulli": "Katakulli'nin yönetmeni ve fikir babası. Oyunun dramaturjisinden sahne diline kadar tüm yaratıcı süreci yönetiyor.",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/"
+        }
+      ]
+    },
+    {
+      "slug": "yonetmen-yardimcisi",
+      "name": "Sena Aynacı",
+      "role": "Yönetmen Yardımcısı",
+      "photo": "/uploads/yonetmen-yardimcisi.png",
+      "short": "Provaların görünmez kahramanı.",
+      "bio": [
+        "Genç kuşak yönetmenlerden. Birçok bağımsız yapımda yönetmen yardımcısı ve reji asistanı olarak çalıştı."
+      ],
+      "education": [
+        "Kadir Has Üniversitesi — Tiyatro"
+      ],
+      "stage": [
+        "Kral Übü",
+        "Antigone"
+      ],
+      "other": [],
+      "katakulli": "Prova sürecinin koordinasyonu ve sahne planlarının uygulanmasından sorumlu.",
+      "socials": []
+    },
+    {
+      "slug": "sosyal-medya",
+      "name": "İsmail Sait Erdoğan",
+      "role": "Sosyal Medya & Dekor",
+      "photo": "/uploads/dramaturg.png",
+      "short": "Teknik disiplini tiyatro tutkusuyla sahnede buluşturuyor.",
+      "bio": [
+        "2008 doğumlu genç oyuncu, temel eğitimini İSOV Dinçkök Mesleki ve Teknik Anadolu Lisesi Endüstriyel Otomasyon Teknolojileri alanında tamamlayarak teknik disiplin ve analitik düşünme becerisi kazandı.",
+        "Teknik alandaki arka planını sahne sanatlarına olan tutkusuyla birleştiren oyuncu, oyunculuk yolculuğunu pekiştirmek amacıyla Sarıyer Belediyesi Tiyatro Kursu'nda kapsamlı bir tiyatro eğitimi aldı ve 2025 yılında bu programdan başarıyla mezun oldu.",
+        "Tiyatro disiplinini ve sahne pratiğini teknik donanımıyla harmanlayarak geliştiren genç yetenek, sahne üzerindeki enerjisi ve rolüne olan bağlılığıyla tiyatro çalışmalarını kararlılıkla sürdürmektedir."
+      ],
+      "education": [
+        "İSOV Dinçkök Mesleki ve Teknik Anadolu Lisesi — Endüstriyel Otomasyon Teknolojileri",
+        "Sarıyer Belediyesi Tiyatro Kursu — Oyunculuk Eğitimi"
+      ],
+      "stage": [
+        "Masal Çadırı: Prenses Dora"
+      ],
+      "other": [],
+      "katakulli": "Katakulli oyununun sosyal medya ekibinde yer alarak dijital içerik ve tanıtım süreçlerini yürüttü; aynı zamanda dekor hazırlığı ve uygulama aşamalarına katkı sağladı.",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/ismailsaiterdogan/"
+        }
+      ]
+    },
+    {
+      "slug": "sosyal-medya",
+      "name": "Gizem Karakuş",
+      "role": "Sosyal Medya Yönetimi",
+      "photo": "/uploads/sahne-tasarimi.png",
+      "short": "Sosyal Medyanın Anahtarı",
+      "bio": [
+        "1996 yılında İstanbul’da doğdu. Sahne aşkı çocukluk yıllarından itibaren içinde varlığını sürdürürken, hayatının bir döneminde keşfettiği taklit yeteneği, onu tiyatro dünyasına adım atmaya yöneltti. Sahneye duyduğu ilgi ve oyunculuk tutkusu doğrultusunda kendini geliştirmeye devam etti."
+      ],
+      "education": [
+        "Beykent Üniversitesi – Halkla İlişkiler ve Reklamcılık, Lisans"
+      ],
+      "stage": [
+        "Minyona – Gökyüzünü İten Kuş"
+      ],
+      "other": [],
+      "katakulli": "Sosyal Medya Yönetimi",
+      "socials": []
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * KATAKULLİ design system — cinematic stage, burgundy, cream, gold.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-cream: var(--cream);
+  --color-burgundy: var(--burgundy);
+  --color-burgundy-deep: var(--burgundy-deep);
+  --color-stage: var(--stage);
+  --color-stage-elevated: var(--stage-elevated);
+
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-card: 0 20px 50px -20px oklch(0 0 0 / 0.7), 0 0 0 1px oklch(1 0 0 / 0.04);
+  --shadow-glow: 0 0 80px -20px var(--gold);
+  --shadow-red: 0 20px 60px -20px var(--burgundy);
+
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-spot: spot 9s ease-in-out infinite alternate;
+  --animate-shimmer: shimmer 3s linear infinite;
+  --animate-curtain: curtain 1.6s cubic-bezier(0.77, 0, 0.18, 1) both;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes spot {
+    from { transform: translateX(-8%) scale(1); opacity: 0.55; }
+    to { transform: translateX(8%) scale(1.15); opacity: 0.85; }
+  }
+  @keyframes shimmer {
+    from { background-position: 200% center; }
+    to { background-position: -200% center; }
+  }
+  @keyframes curtain {
+    from { transform: scaleY(1); }
+    to { transform: scaleY(0); }
+  }
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --stage: oklch(0.13 0.012 20);
+  --stage-elevated: oklch(0.18 0.018 20);
+  --burgundy: oklch(0.38 0.15 20);
+  --burgundy-deep: oklch(0.26 0.1 18);
+  --cream: oklch(0.95 0.02 85);
+  --gold: oklch(0.78 0.12 82);
+  --gold-soft: oklch(0.88 0.07 85);
+
+  --background: var(--stage);
+  --foreground: var(--cream);
+  --card: var(--stage-elevated);
+  --card-foreground: var(--cream);
+  --popover: var(--stage-elevated);
+  --popover-foreground: var(--cream);
+  --primary: var(--burgundy);
+  --primary-foreground: var(--cream);
+  --secondary: oklch(0.22 0.015 30);
+  --secondary-foreground: var(--cream);
+  --muted: oklch(0.22 0.012 30);
+  --muted-foreground: oklch(0.7 0.02 70);
+  --accent: var(--gold);
+  --accent-foreground: var(--stage);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: var(--cream);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: var(--gold);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: var(--burgundy);
+    color: var(--cream);
+  }
+}
+
+/* Gold gradient text */
+@utility text-gold-gradient {
+  background: linear-gradient(100deg, var(--gold-soft), var(--gold) 45%, oklch(0.62 0.1 75) 70%, var(--gold-soft));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Overline label with rule */
+@utility eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Thin gold hairline separator */
+@utility hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+  opacity: 0.6;
+}
+
+/* Cinematic film grain overlay */
+@utility grain {
+  position: relative;
+  &::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Stage spotlight cone */
+@utility spotlight {
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: -10%;
+  width: 90vw;
+  max-width: 900px;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at 50% 0%, oklch(0.85 0.1 80 / 0.35), oklch(0.6 0.15 25 / 0.12) 40%, transparent 70%);
+  filter: blur(20px);
+  animation: var(--animate-spot);
+}
+
+/* Velvet curtain gradient */
+@utility velvet {
+  background:
+    repeating-linear-gradient(90deg, oklch(0 0 0 / 0.25) 0 2px, transparent 2px 48px),
+    linear-gradient(90deg, var(--burgundy-deep), var(--burgundy) 30%, var(--burgundy-deep) 55%, var(--burgundy) 80%, var(--burgundy-deep));
+}
+
+/* Card hover lift */
+@utility card-lift {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card), var(--shadow-red);
+  }
+}
+
+/* Vertical photo gradient fade */
+@utility photo-fade {
+  background: linear-gradient(180deg, transparent 35%, oklch(0.13 0.012 20 / 0.75) 75%, var(--stage) 100%);
+}
+
+/* Staggered reveal helpers */
+@utility reveal {
+  animation: var(--animate-fade-up);
+}
+@utility delay-1 { animation-delay: 0.1s; }
+@utility delay-2 { animation-delay: 0.2s; }
+@utility delay-3 { animation-delay: 0.35s; }
+@utility delay-4 { animation-delay: 0.5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
