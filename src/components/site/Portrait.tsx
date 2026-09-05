@@ -11,9 +11,12 @@ export function Portrait({
   eager?: boolean;
 }) {
   if (person.photo) {
+    const photoSrc = person.photo.startsWith("/")
+      ? `${import.meta.env.BASE_URL}${person.photo.slice(1)}`
+      : person.photo;
     return (
       <img
-        src={person.photo}
+        src={photoSrc}
         alt={person.name}
         width={768}
         height={1024}
