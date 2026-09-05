@@ -54,7 +54,19 @@ function peopleFilePlugin(): Plugin {
             avif: "avif",
           };
           const ext = extMap[match[1].toLowerCase()] ?? "jpg";
-          const safeSlug = body.slug.toLowerCase().replace(/[^a-z0-9-çğıöşü]/gi, "-").replace(/-+/g, "-").replace(/^-|-$/g, "") || "photo";
+          const safeSlug = body.slug
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/ç/g, "c")
+            .replace(/ğ/g, "g")
+            .replace(/ı/g, "i")
+            .replace(/ö/g, "o")
+            .replace(/ş/g, "s")
+            .replace(/ü/g, "u")
+            .replace(/[^a-z0-9-]+/g, "-")
+            .replace(/-+/g, "-")
+            .replace(/^-|-$/g, "") || "photo";
           const uploadDir = resolve(process.cwd(), "public/uploads");
           if (!existsSync(uploadDir)) mkdirSync(uploadDir, { recursive: true });
           const filename = `${safeSlug}.${ext}`;
