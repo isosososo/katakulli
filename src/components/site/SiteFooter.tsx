@@ -18,7 +18,7 @@ export function SiteFooter() {
               </div>
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Geleneksel Türk tiyatrosunun ruhunu çağdaş sahne diliyle buluşturan bir kabare komedisi.
+              1920'lerin başında geçen, evlilikleri ve hesapları birbirine karıştıran müzikli bir komedi.
             </p>
           </div>
 
@@ -53,6 +53,9 @@ export function SiteFooter() {
         <div className="hairline mt-14" />
         <p className="mt-6 text-center text-xs tracking-[0.2em] text-muted-foreground">
           © {SITE.year} Katakulli – Tüm Hakları Saklıdır.
+        </p>
+        <p className="mt-3 text-center text-xs tracking-[0.16em] text-muted-foreground/70">
+          Design by İsmial Sait Erdoğan
         </p>
       </div>
     </footer>

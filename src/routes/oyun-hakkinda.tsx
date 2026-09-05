@@ -7,7 +7,7 @@ import { usePeopleData } from "@/hooks/use-people";
 
 const TITLE = "Oyun Hakkında — Katakulli";
 const DESC =
-  "Katakulli nedir? Geleneksel Türk tiyatrosunun orta oyunu ve Karagöz mirasından beslenen çağdaş kabare komedisinin hikâyesi.";
+  "Katakulli, 1920'lerin başında geçen, evlilikler ve borçlar etrafında gelişen 70 dakikalık müzikli bir komedidir.";
 
 export const Route = createFileRoute("/oyun-hakkinda")({
   head: () => ({
@@ -22,10 +22,10 @@ export const Route = createFileRoute("/oyun-hakkinda")({
 });
 
 const facts = [
-  { k: "Tür", v: "Kabare Komedi" },
-  { k: "Süre", v: "90 dk · Tek perde" },
+  { k: "Tür", v: "Komedi" },
+  { k: "Süre", v: "70 dakika" },
   { k: "Sezon", v: "2026" },
-  { k: "Sahne", v: "Sarıyer Belediyesi Tiyatrosu" },
+  { k: "Sahne", v: "Boğaziçi Kültür Merkezi" },
 ];
 
 function AboutPage() {
@@ -34,8 +34,8 @@ function AboutPage() {
     <>
       <PageIntro
         eyebrow="Oyun Hakkında"
-        title="Bir fes, bir sahne, bin bir katakulli."
-        description="Geleneğin aklı, bugünün mizahıyla."
+        title="Bir aile, bin bir hesap."
+        description="1920'lerin başında geçen müzikli bir komedi."
       />
 
       <section className="mx-auto max-w-6xl px-5 md:px-8">
@@ -54,17 +54,18 @@ function AboutPage() {
         <div className="mt-12 grid gap-12 md:grid-cols-[1fr_320px] md:gap-16">
           <div className="space-y-6 text-base leading-relaxed text-cream/85 md:text-lg">
             <p className="font-display text-2xl leading-snug text-cream md:text-3xl">
-              "Katakulli" — hile, dolap, oyun içinde oyun. Mahalle meydanındaki orta oyunundan gölge perdesindeki
-              Karagöz'e, bu topraklarda kahkaha hep bir katakulliyle başladı.
+              "Katakulli" — evliliklerin henüz resmî nikâhla yapılmadığı bir dönemde, aile hesaplarının birbirine
+              karıştığı müzikli ve bol kahkahalı bir hikâye.
             </p>
             <p>
-              Sarıyer Belediyesi Tiyatrosu'nun yeni yapımı Katakulli, geleneksel Türk tiyatrosunun tipleri ve
-              ritmini çağdaş bir kabare formunda yeniden kuruyor. Hacivat'ın kelimeleri, Karagöz'ün patavatsızlığı,
-              Zenne'nin entrikası ve Tuzsuz Deli Bekir'in gürültüsü bu kez bugünün İstanbul'unda buluşuyor.
+              Hafize'nin iki oğlu vardır: Hafız Servet ve Ali Osman. Büyük oğul Hafız Servet hafızlık yapmak için
+              Katar'a gitmiştir. Küçük oğul Ali Osman ise çalışıp borçlarını ödemek yerine, abisinin kazanıp getireceği
+              parayla kurtulmanın hesabını yapmaktadır.
             </p>
             <p>
-              Canlı müzik, dans ve seyirciyle doğrudan temas kuran bir sahne diliyle Katakulli; nostaljiye
-              sığınmadan, geleneğin bugüne söyleyecek sözü olduğunu hatırlatıyor.
+              Ali Osman'ın çevirdiği türlü katakulliler; abisi Hafız Servet ile Melek'in evliliğinden, Kambur Hasan'ın
+              hesaplarına ve Mahidevran Hanım ile Gonca'nın beklentilerine kadar herkesi içine çeken büyük bir
+              karmaşaya dönüşür. Bir sorun çözülmeden yenisi çıkar; her hesap başka bir hesabı bozar.
             </p>
           </div>
 

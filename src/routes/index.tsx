@@ -2,14 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import heroPoster from "@/assets/hero-poster.jpg";
 import fes from "@/assets/fes.png";
-import { SITE, cast, crew } from "@/data/people";
+import { SITE } from "@/data/people";
 import { usePeopleData } from "@/hooks/use-people";
 import { PersonCard } from "@/components/site/PersonCard";
 import { SectionHeading } from "@/components/site/Section";
 
 const TITLE = "Katakulli — Sarıyer Belediyesi Tiyatrosu";
 const DESC =
-  "Katakulli: Sarıyer Belediyesi Tiyatrosu'nun geleneksel Türk tiyatrosunu çağdaş sahneyle buluşturan kabare komedisi. Oyuncular ve yapım ekibiyle tanışın.";
+  "Katakulli: 1920'lerin başında geçen, evlilikler, borçlar ve hesaplarla iç içe müzikli bir komedi. Oyuncular ve yapım ekibiyle tanışın.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,6 +24,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const { cast, crew } = usePeopleData();
   const featured = cast.slice(0, 4);
   const featuredCrew = crew.slice(0, 4);
 
@@ -50,7 +51,7 @@ function Index() {
         <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pt-32 pb-16 md:justify-center md:px-8 md:pb-24">
           <div className="reveal flex items-center gap-3">
             <span className="h-px w-10 bg-gold" />
-            <p className="eyebrow">Kabare Komedi · 2026 Sezonu</p>
+            <p className="eyebrow">Komedi · 70 Dakika</p>
           </div>
 
           <h1 className="font-display reveal delay-1 mt-6 text-[clamp(3.5rem,17vw,11rem)] leading-[0.85] font-semibold tracking-tight text-cream">
@@ -64,7 +65,7 @@ function Index() {
           </p>
 
           <p className="reveal delay-3 mt-6 max-w-md text-base leading-relaxed text-cream/75 md:text-lg">
-            Karagöz'ün gölgesinden Hacivat'ın kelimelerine; geleneğin aklı, bugünün mizahıyla sahnede.
+            1920'lerin başında, resmî nikâhın henüz hayatımıza girmediği günlerde; bir ailenin bitmeyen hesabı, bol kahkahayla sahnede.
           </p>
 
           <div className="reveal delay-4 mt-10 flex flex-col gap-3 sm:flex-row">
@@ -107,8 +108,8 @@ function Index() {
           <div>
             <SectionHeading
               eyebrow="Oyun Hakkında"
-              title="Bir fes, bir sahne, bin bir katakulli."
-              description="Geleneksel Türk tiyatrosunun orta oyunu ve Karagöz–Hacivat mirasından beslenen Katakulli; entrika, müzik ve kahkahayı çağdaş bir kabare diliyle harmanlıyor."
+              title="Bir aile, bin bir hesap."
+              description="Katakulli, 1920'lerin başında geçen müzikli bir komedi. Hafize'nin oğulları Hafız Servet ve Ali Osman'ın etrafında büyüyen evlilikler, borçlar ve katakulliler herkesi bu büyük karmaşanın içine çeker."
             />
             <Link
               to="/oyun-hakkinda"

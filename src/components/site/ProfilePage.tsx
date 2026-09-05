@@ -18,6 +18,8 @@ export function ProfilePage({ person, kind, others }: Props) {
   const isCast = kind === "cast";
   const backTo = isCast ? "/oyuncular" : "/ekip";
   const backLabel = isCast ? "Tüm Oyuncular" : "Yapım Ekibi";
+  let sectionNumber = 1;
+  const nextSectionNumber = () => String(sectionNumber++).padStart(2, "0");
 
   return (
     <article>
@@ -56,7 +58,7 @@ export function ProfilePage({ person, kind, others }: Props) {
               </span>
               <span className="font-display text-2xl text-cream/90 md:text-3xl">{person.role}</span>
             </div>
-            <p className="reveal delay-3 mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="reveal delay-3 mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
               {person.short}
             </p>
             <div className="reveal delay-4 mt-8">
@@ -68,25 +70,31 @@ export function ProfilePage({ person, kind, others }: Props) {
 
       {/* Sections */}
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <ProfileSection number="01" title="Biyografi">
-          <div className="space-y-4">
+        <ProfileSection number={nextSectionNumber()} title="Biyografi">
+          <div className="space-y-3">
             {person.bio.map((p) => (
               <p key={p}>{p}</p>
             ))}
           </div>
         </ProfileSection>
 
-        <ProfileSection number="02" title="Eğitim">
-          <List items={person.education} />
-        </ProfileSection>
+        {person.education.length > 0 && (
+          <ProfileSection number={nextSectionNumber()} title="Eğitim">
+            <List items={person.education} />
+          </ProfileSection>
+        )}
 
-        <ProfileSection number="03" title={isCast ? "Sahne Yolculuğu" : "Önceki Çalışmalar"}>
-          <List items={person.stage} />
-        </ProfileSection>
+        {person.stage.length > 0 && (
+          <ProfileSection number={nextSectionNumber()} title="Sahne Yolculuğu">
+            <List items={person.stage} />
+          </ProfileSection>
+        )}
 
-        <ProfileSection number="04" title="Diğer Çalışmalar">
-          <List items={person.other} />
-        </ProfileSection>
+        {person.other.length > 0 && (
+          <ProfileSection number={nextSectionNumber()} title="Diğer Çalışmalar">
+            <List items={person.other} />
+          </ProfileSection>
+        )}
 
         <section className="grain relative my-6 overflow-hidden rounded-2xl bg-burgundy-deep p-6 md:my-10 md:p-12">
           <img
@@ -101,12 +109,12 @@ export function ProfilePage({ person, kind, others }: Props) {
           <h2 className="font-display mt-3 text-3xl text-cream md:text-4xl">
             {isCast ? `Katakulli'de: ${person.role}` : `Katakulli'deki görevi: ${person.role}`}
           </h2>
-          <p className="relative mt-5 max-w-2xl text-base leading-relaxed text-cream/85 md:text-lg">
+          <p className="relative mt-5 max-w-2xl text-base leading-relaxed text-cream/85">
             {person.katakulli}
           </p>
         </section>
 
-        <ProfileSection number="05" title="Sosyal Medya">
+        <ProfileSection number={nextSectionNumber()} title="Sosyal Medya">
           {person.socials.length === 0 ? (
             <p className="text-muted-foreground italic">Sosyal medya bağlantısı eklenmemiş.</p>
           ) : (

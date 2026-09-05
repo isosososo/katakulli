@@ -29,9 +29,9 @@ function CrewPage() {
         count={crew.length}
       />
       <section className="mx-auto max-w-6xl px-5 md:px-8">
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {crew.map((p, i) => (
-            <PersonCard key={p.slug} person={p} kind="crew" compact index={i} />
+            <PersonCard key={p.slug} person={p} kind="crew" index={i} />
           ))}
         </div>
       </section>

@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import fes from "@/assets/fes.png";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
@@ -80,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { name: "theme-color", content: "#1a1112" },
       { title: "Katakulli — Sarıyer Belediyesi Tiyatrosu" },
-      { name: "description", content: "Katakulli oyununun oyuncuları ve yapım ekibi." },
+      { name: "description", content: "Katakulli: 1920'lerin başında geçen, 70 dakikalık müzikli komedi." },
       { name: "author", content: "Sarıyer Belediyesi Tiyatrosu" },
       { property: "og:site_name", content: "Katakulli" },
       { property: "og:type", content: "website" },
@@ -95,7 +96,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap",
       },
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: fes, type: "image/png" },
     ],
   }),
   shellComponent: RootShell,

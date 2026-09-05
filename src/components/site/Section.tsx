@@ -26,24 +26,28 @@ export function SectionHeading({
 
 export function ProfileSection({ title, children, number }: { title: string; children: ReactNode; number: string }) {
   return (
-    <section className="grid gap-4 border-t border-border py-10 md:grid-cols-[220px_1fr] md:gap-10 md:py-14">
+    <section className="grid gap-4 border-t border-border py-8 md:grid-cols-[220px_1fr] md:gap-10 md:py-10">
       <div className="flex items-baseline gap-3 md:block">
         <span className="font-display text-sm text-gold/70">{number}</span>
         <h2 className="font-sans text-xs font-semibold tracking-[0.32em] text-gold uppercase md:mt-2">{title}</h2>
       </div>
-      <div className="text-base leading-relaxed text-cream/85 md:text-lg">{children}</div>
+      <div className="text-base leading-relaxed text-cream/85">{children}</div>
     </section>
   );
 }
 
 export function List({ items }: { items: string[] }) {
   if (items.length === 0) return <p className="text-muted-foreground italic">Yakında eklenecek.</p>;
+  const normalizedItems = items.flatMap((item) => {
+    const parts = item.split(/(?=\d{4}(?:-\d{2,4})?\s*[-–])/).map((part) => part.trim()).filter(Boolean);
+    return parts.length > 1 ? parts : [item];
+  });
   return (
-    <ul className="space-y-3">
-      {items.map((it) => (
-        <li key={it} className="flex gap-4">
+    <ul className="space-y-2">
+      {normalizedItems.map((it, index) => (
+        <li key={`${it}-${index}`} className="flex min-w-0 gap-4">
           <span className="mt-3 h-px w-6 shrink-0 bg-gold/60" />
-          <span>{it}</span>
+          <span className="min-w-0 break-words">{it}</span>
         </li>
       ))}
     </ul>

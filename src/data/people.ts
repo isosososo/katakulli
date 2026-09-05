@@ -36,10 +36,7 @@ export const SITE = {
   name: "KATAKULLİ",
   company: "Sarıyer Belediyesi Tiyatrosu",
   year: 2026,
-  socials: [
-    { platform: "instagram", url: "https://instagram.com/" },
-    { platform: "youtube", url: "https://youtube.com/" },
-  ] as Social[],
+  socials: [{ platform: "instagram", url: "https://www.instagram.com/katakulli.sbt/" }] as Social[],
 };
 
 export const cast: Person[] = [
