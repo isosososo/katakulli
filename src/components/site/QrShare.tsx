@@ -10,7 +10,11 @@ export function QrShare({ name }: { name: string }) {
   const [canShare, setCanShare] = useState(false);
 
   useEffect(() => {
-    setUrl(window.location.href);
+    const base = import.meta.env.BASE_URL;
+    const pathname = window.location.pathname.startsWith(base)
+      ? window.location.pathname.slice(base.length)
+      : window.location.pathname.replace(/^\//, "");
+    setUrl(`${window.location.origin}${base}${pathname}${window.location.search}${window.location.hash}`);
     setCanShare(typeof navigator !== "undefined" && !!navigator.share);
   }, []);
 
@@ -86,11 +90,11 @@ export function QrShare({ name }: { name: string }) {
               {url && (
                 <QRCodeSVG
                   value={url}
-                  size={208}
-                  level="M"
+                  size={224}
+                  level="H"
                   bgColor="transparent"
                   fgColor="#1a0f10"
-                  marginSize={0}
+                  marginSize={4}
                 />
               )}
             </div>
