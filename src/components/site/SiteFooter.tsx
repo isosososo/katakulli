@@ -54,8 +54,11 @@ export function SiteFooter() {
         <p className="mt-6 text-center text-xs tracking-[0.2em] text-muted-foreground">
           © {SITE.year} Katakulli – Tüm Hakları Saklıdır.
         </p>
-        <p className="mt-3 text-center text-xs tracking-[0.16em] text-muted-foreground/70">
-          Design by İsmial Sait Erdoğan
+        <p className="mt-5 text-center text-[11px] font-medium tracking-[0.22em] uppercase">
+          <span className="inline-flex items-center gap-2 rounded-full border border-gold/35 bg-gold/10 px-4 py-2 text-gold shadow-[0_0_24px_rgba(216,170,80,0.12)] transition-all duration-300 hover:border-gold/70 hover:bg-gold/20 hover:text-cream hover:shadow-[0_0_30px_rgba(216,170,80,0.24)] focus-within:border-gold/70 focus-within:bg-gold/20">
+            <span className="h-1.5 w-1.5 rounded-full bg-coral shadow-[0_0_10px_rgba(229,116,92,0.9)]" aria-hidden="true" />
+            <span>Design by İsmail Sait Erdoğan</span>
+          </span>
         </p>
       </div>
     </footer>
