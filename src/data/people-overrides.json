@@ -402,24 +402,33 @@
       ]
     },
     {
-      "slug": "gizem-karakus",
-      "name": "Gizem Karakuş",
+      "slug": "gizem-kahraman",
+      "name": "Gizem Kahraman",
       "role": "Sosyal Medya Yönetimi",
-      "photo": "/uploads/sahne-tasarimi.png",
-      "short": "Dijital iletişimi ve sosyal medya içeriklerini yönetiyor.",
+      "short": "Oyunun dijital iletişimini destekliyor.",
       "bio": [
-        "1996 yılında İstanbul'da doğdu. Halkla ilişkiler ve reklamcılık eğitimi aldı.",
-        "Katakulli'nin sosyal medya iletişimi ve dijital tanıtım çalışmalarını yürütüyor."
+        "1999 yılında İstanbul'da doğdu. Esas mesleği yazılım geliştiriciliğidir.",
+        "Sarıyer Halk Eğitim Merkezi ve Sarıyer Belediyesi Tiyatrosu'nda tiyatro eğitimi aldı; Katakulli'nin sosyal medya çalışmalarını yürütüyor."
       ],
       "education": [
-        "Beykent Üniversitesi – Halkla İlişkiler ve Reklamcılık, Lisans"
+        "Marmara Üniversitesi  - Mühendislik Yönetimi Yüksek Lisans",
+        "Sarıyer Halk Eğitim Merkezi – Tiyatro Eğitimi",
+        "Sarıyer Belediye Tiyatrosu – Tiyatro Eğitimi"
       ],
       "stage": [
-        "Minyona – Gökyüzünü İten Kuş"
+        "Her Hırsız Her Şey Değildir",
+        "Otogargara",
+        "Can Ders Çalışmıyor — Çocuk oyunu"
       ],
       "other": [],
-      "katakulli": "Katakulli'nin sosyal medya iletişimini ve dijital tanıtım çalışmalarını yürütüyor.",
-      "socials": []
+      "katakulli": "Oyunun sosyal medya iletişimine katkı sağlıyor.",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/gzemkahramann"
+        }
+      ],
+      "photo": "/uploads/gizem-kahraman.png"
     },
     {
       "slug": "ekin-gundu",
@@ -450,33 +459,24 @@
       "socials": []
     },
     {
-      "slug": "gizem-kahraman",
-      "name": "Gizem Kahraman",
+      "slug": "gizem-karakus",
+      "name": "Gizem Karakuş",
       "role": "Sosyal Medya Yönetimi",
-      "short": "Oyunun dijital iletişimini destekliyor.",
+      "photo": "/uploads/sahne-tasarimi.png",
+      "short": "Dijital iletişimi ve sosyal medya içeriklerini yönetiyor.",
       "bio": [
-        "1999 yılında İstanbul'da doğdu. Esas mesleği yazılım geliştiriciliğidir.",
-        "Sarıyer Halk Eğitim Merkezi ve Sarıyer Belediyesi Tiyatrosu'nda tiyatro eğitimi aldı; Katakulli'nin sosyal medya çalışmalarını yürütüyor."
+        "1996 yılında İstanbul'da doğdu. Halkla ilişkiler ve reklamcılık eğitimi aldı.",
+        "Katakulli'nin sosyal medya iletişimi ve dijital tanıtım çalışmalarını yürütüyor."
       ],
       "education": [
-        "Marmara Üniversitesi  - Mühendislik Yönetimi Yüksek Lisans",
-        "Sarıyer Halk Eğitim Merkezi – Tiyatro Eğitimi",
-        "Sarıyer Belediye Tiyatrosu – Tiyatro Eğitimi"
+        "Beykent Üniversitesi – Halkla İlişkiler ve Reklamcılık, Lisans"
       ],
       "stage": [
-        "Her Hırsız Her Şey Değildir",
-        "Otogargara",
-        "Can Ders Çalışmıyor — Çocuk oyunu"
+        "Minyona – Gökyüzünü İten Kuş"
       ],
       "other": [],
-      "katakulli": "Oyunun sosyal medya iletişimine katkı sağlıyor.",
-      "socials": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/gzemkahramann"
-        }
-      ],
-      "photo": "/uploads/gizem-kahraman.png"
+      "katakulli": "Katakulli'nin sosyal medya iletişimini ve dijital tanıtım çalışmalarını yürütüyor.",
+      "socials": []
     },
     {
       "slug": "kerem-akillioglu",
