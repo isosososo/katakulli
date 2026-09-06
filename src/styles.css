@@ -206,11 +206,6 @@
   background: linear-gradient(180deg, transparent 35%, oklch(0.13 0.012 20 / 0.75) 75%, var(--stage) 100%);
 }
 
-.portrait-image {
-  background: #070707;
-  filter: brightness(1.16) contrast(1.32) saturate(0.45);
-}
-
 /* Staggered reveal helpers */
 @utility reveal {
   animation: var(--animate-fade-up);
