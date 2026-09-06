@@ -23,7 +23,11 @@ export function Portrait({
         height={1024}
         loading={eager ? "eager" : "lazy"}
         decoding="async"
-        className={className}
+        className={`${className} portrait-image`}
+        style={{
+          filter: "brightness(1.16) contrast(1.32) saturate(0.45)",
+          objectPosition: "center 18%",
+        }}
       />
     );
   }
