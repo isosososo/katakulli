@@ -39,8 +39,13 @@ export function ProfileSection({ title, children, number }: { title: string; chi
 export function List({ items }: { items: string[] }) {
   if (items.length === 0) return <p className="text-muted-foreground italic">Yakında eklenecek.</p>;
   const normalizedItems = items.flatMap((item) => {
-    const parts = item.split(/(?=\d{4}(?:-\d{2,4})?\s*[-–])/).map((part) => part.trim()).filter(Boolean);
-    return parts.length > 1 ? parts : [item];
+    const rawParts = item
+      .split(/(?=\d{4}(?:-\d{2,4})?\s*[-–])/)
+      .map((part) => part.trim())
+      .filter(Boolean);
+    const parts = rawParts
+      .filter((part) => part && !/^\d{4}(?:-\d{2,4})?\s*[-–]?\s*$/.test(part));
+    return parts;
   });
   return (
     <ul className="space-y-2">
