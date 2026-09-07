@@ -6,6 +6,7 @@ import { SITE } from "@/data/people";
 import { usePeopleData } from "@/hooks/use-people";
 import { PersonCard } from "@/components/site/PersonCard";
 import { SectionHeading } from "@/components/site/Section";
+import { MusicPlayerControls } from "@/components/site/MusicPlayer";
 
 const TITLE = "Katakulli — Sarıyer Belediyesi Tiyatrosu";
 const DESC =
@@ -112,7 +113,9 @@ function Index() {
             <span>Boğaziçi Kültür Sanat Merkezi</span>
           </div>
           <a
-            href="/oyun-hakkinda#bilgiler"
+            href="https://sariyer.bel.tr"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gold px-5 text-xs font-bold tracking-[0.16em] text-accent-foreground uppercase transition-colors hover:bg-gold-soft"
           >
             Gösterim bilgileri <ArrowRight className="h-4 w-4" />
@@ -168,14 +171,7 @@ function Index() {
               </p>
             </div>
           </div>
-          <audio
-            className="relative mt-6 w-full accent-gold md:mt-0 md:w-[min(100%,24rem)]"
-            controls
-            preload="metadata"
-          >
-            <source src={`${import.meta.env.BASE_URL}katakulli-sarkisi.mpeg`} type="audio/mpeg" />
-            Tarayıcınız ses oynatmayı desteklemiyor.
-          </audio>
+          <MusicPlayerControls />
         </div>
       </section>
 

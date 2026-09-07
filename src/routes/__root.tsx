@@ -15,7 +15,7 @@ import fes from "@/assets/fes.png";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { MusicPlayer } from "@/components/site/MusicPlayer";
+import { MusicPlayer, MusicPlayerProvider } from "@/components/site/MusicPlayer";
 import { AdminPanel } from "@/components/admin/AdminPanel";
 
 function NotFoundComponent() {
@@ -137,14 +137,14 @@ function RootComponent() {
       {isAdmin ? (
         <AdminPanel />
       ) : (
-        <>
+        <MusicPlayerProvider>
           <SiteHeader />
           <main className="min-h-screen">
             <Outlet />
           </main>
           <SiteFooter />
           <MusicPlayer />
-        </>
+        </MusicPlayerProvider>
       )}
     </QueryClientProvider>
   );

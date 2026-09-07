@@ -32,7 +32,9 @@ export function SiteFooter() {
               komedi.
             </p>
             <a
-              href="/oyun-hakkinda#bilgiler"
+              href="https://sariyer.bel.tr"
+              target="_blank"
+              rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-gold-soft"
             >
               <MapPin className="h-4 w-4" />

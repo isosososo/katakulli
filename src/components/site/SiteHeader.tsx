@@ -57,7 +57,9 @@ export function SiteHeader() {
           </nav>
 
           <a
-            href="/oyun-hakkinda#bilgiler"
+            href="https://sariyer.bel.tr"
+            target="_blank"
+            rel="noreferrer"
             className="hidden h-10 items-center rounded-full border border-gold/60 px-4 text-[0.65rem] font-bold tracking-[0.16em] text-gold uppercase transition-colors hover:bg-gold hover:text-accent-foreground lg:inline-flex"
           >
             Gösterim bilgileri
