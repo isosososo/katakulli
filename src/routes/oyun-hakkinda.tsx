@@ -25,7 +25,7 @@ const facts = [
   { k: "Tür", v: "Komedi" },
   { k: "Süre", v: "70 dakika" },
   { k: "Sezon", v: "2026" },
-  { k: "Sahne", v: "Boğaziçi Kültür Merkezi" },
+  { k: "Sahne", v: "Boğaziçi Kültür Sanat Merkezi", href: "https://share.google/bzD6k281L4Dqp5pjO" },
 ];
 
 function AboutPage() {
@@ -75,7 +75,15 @@ function AboutPage() {
               {facts.map((f) => (
                 <div key={f.k} className="border-b border-border pb-4 last:border-0">
                   <dt className="text-[0.62rem] tracking-[0.3em] text-gold uppercase">{f.k}</dt>
-                  <dd className="font-display mt-1 text-lg text-cream">{f.v}</dd>
+                  <dd className="font-display mt-1 text-lg text-cream">
+                    {f.href ? (
+                      <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-gold/60 underline-offset-4">
+                        {f.v}
+                      </a>
+                    ) : (
+                      f.v
+                    )}
+                  </dd>
                 </div>
               ))}
               <div>
