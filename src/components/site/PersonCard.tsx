@@ -30,15 +30,21 @@ export function PersonCard({ person, kind, compact = false, index = 0 }: Props) 
           <p className="text-[0.62rem] font-semibold tracking-[0.3em] text-gold uppercase">
             {kind === "cast" ? "Katakulli'de" : "Görevi"}
           </p>
-          <p className="font-display mt-1 text-lg leading-tight text-cream md:text-xl">{person.role}</p>
+          <p className="font-display mt-1 text-lg leading-tight text-cream md:text-xl">
+            {person.role}
+          </p>
         </div>
       </div>
 
       <div className="flex items-start justify-between gap-3 p-4 md:p-5">
         <div className="min-w-0">
-          <h3 className="font-display truncate text-xl text-cream md:text-2xl">{person.name}</h3>
+          <h3 className="font-display text-xl leading-tight text-cream break-words md:text-2xl">
+            {person.name}
+          </h3>
           {!compact && (
-            <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{person.short}</p>
+            <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+              {person.short}
+            </p>
           )}
         </div>
         <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-border text-gold transition-all duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-accent-foreground">

@@ -1,3 +1,4 @@
+import { ArrowRight, MapPin } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import fes from "@/assets/fes.png";
 import { SITE } from "@/data/people";
@@ -11,23 +12,53 @@ export function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <img src={fes} alt="" width={44} height={44} loading="lazy" className="h-11 w-11 object-contain" />
+              <img
+                src={fes}
+                alt=""
+                width={44}
+                height={44}
+                loading="lazy"
+                className="h-11 w-11 object-contain"
+              />
               <div>
-                <p className="font-display text-2xl font-semibold tracking-[0.18em] text-cream">KATAKULLİ</p>
+                <p className="font-display text-2xl font-semibold tracking-[0.18em] text-cream">
+                  KATAKULLİ
+                </p>
                 <p className="text-xs tracking-[0.28em] text-gold uppercase">{SITE.company}</p>
               </div>
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              1920'lerin başında geçen, evlilikleri ve hesapları birbirine karıştıran müzikli bir komedi.
+              1920'lerin başında geçen, evlilikleri ve hesapları birbirine karıştıran müzikli bir
+              komedi.
             </p>
+            <a
+              href="/oyun-hakkinda#bilgiler"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-gold-soft"
+            >
+              <MapPin className="h-4 w-4" />
+              Gösterim ve konum bilgileri
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
 
           <div>
             <p className="eyebrow">Keşfet</p>
             <ul className="mt-5 space-y-3 text-sm">
-              <li><Link to="/oyuncular" className="text-cream/80 hover:text-gold">Oyuncular</Link></li>
-              <li><Link to="/ekip" className="text-cream/80 hover:text-gold">Yapım Ekibi</Link></li>
-              <li><Link to="/oyun-hakkinda" className="text-cream/80 hover:text-gold">Oyun Hakkında</Link></li>
+              <li>
+                <Link to="/oyuncular" className="text-cream/80 hover:text-gold">
+                  Oyuncular
+                </Link>
+              </li>
+              <li>
+                <Link to="/ekip" className="text-cream/80 hover:text-gold">
+                  Yapım Ekibi
+                </Link>
+              </li>
+              <li>
+                <Link to="/oyun-hakkinda" className="text-cream/80 hover:text-gold">
+                  Oyun Hakkında
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -56,7 +87,10 @@ export function SiteFooter() {
         </p>
         <p className="mt-5 text-center text-[11px] font-medium tracking-[0.22em] uppercase">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/35 bg-gold/10 px-4 py-2 text-gold shadow-[0_0_24px_rgba(216,170,80,0.12)] transition-all duration-300 hover:border-gold/70 hover:bg-gold/20 hover:text-cream hover:shadow-[0_0_30px_rgba(216,170,80,0.24)] focus-within:border-gold/70 focus-within:bg-gold/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-coral shadow-[0_0_10px_rgba(229,116,92,0.9)]" aria-hidden="true" />
+            <span
+              className="h-1.5 w-1.5 rounded-full bg-coral shadow-[0_0_10px_rgba(229,116,92,0.9)]"
+              aria-hidden="true"
+            />
             <span>Design by İsmail Sait Erdoğan</span>
           </span>
         </p>

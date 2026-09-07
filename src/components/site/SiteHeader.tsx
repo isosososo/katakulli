@@ -30,7 +30,13 @@ export function SiteHeader() {
       <div className="bg-background/70 border-b border-border/60 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-20 md:px-8">
           <Link to="/" className="flex items-center gap-3" aria-label="Katakulli ana sayfa">
-            <img src={fes} alt="" width={36} height={36} className="h-9 w-9 object-contain drop-shadow" />
+            <img
+              src={fes}
+              alt=""
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain drop-shadow"
+            />
             <span className="font-display text-xl font-semibold tracking-[0.18em] text-cream md:text-2xl">
               KATAKULLİ
             </span>
@@ -49,6 +55,13 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
+
+          <a
+            href="/oyun-hakkinda#bilgiler"
+            className="hidden h-10 items-center rounded-full border border-gold/60 px-4 text-[0.65rem] font-bold tracking-[0.16em] text-gold uppercase transition-colors hover:bg-gold hover:text-accent-foreground lg:inline-flex"
+          >
+            Gösterim bilgileri
+          </a>
 
           <button
             type="button"
@@ -71,7 +84,10 @@ export function SiteHeader() {
       >
         <div className="velvet h-1.5 w-full" />
         <div className="spotlight opacity-40" />
-        <nav className="relative flex flex-1 flex-col justify-center gap-2 px-8" aria-label="Mobil menü">
+        <nav
+          className="relative flex flex-1 flex-col justify-center gap-2 px-8"
+          aria-label="Mobil menü"
+        >
           {nav.map((n, i) => (
             <Link
               key={n.to}

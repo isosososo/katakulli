@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CalendarDays, MapPin, Music2 } from "lucide-react";
 import heroPoster from "@/assets/hero-poster.jpg";
 import fes from "@/assets/fes.png";
 import { SITE } from "@/data/people";
@@ -65,7 +65,8 @@ function Index() {
           </p>
 
           <p className="reveal delay-3 mt-6 max-w-md text-base leading-relaxed text-cream/75 md:text-lg">
-            1920'lerin başında, resmî nikâhın henüz hayatımıza girmediği günlerde; bir ailenin bitmeyen hesabı, bol kahkahayla sahnede.
+            1920'lerin başında, resmî nikâhın henüz hayatımıza girmediği günlerde; bir ailenin
+            bitmeyen hesabı, bol kahkahayla sahnede.
           </p>
 
           <div className="reveal delay-4 mt-10 flex flex-col gap-3 sm:flex-row">
@@ -86,8 +87,36 @@ function Index() {
         </div>
 
         <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 md:flex">
-          <span className="text-[0.6rem] tracking-[0.4em] text-muted-foreground uppercase">Kaydır</span>
+          <span className="text-[0.6rem] tracking-[0.4em] text-muted-foreground uppercase">
+            Kaydır
+          </span>
           <span className="h-10 w-px bg-gradient-to-b from-gold to-transparent" />
+        </div>
+      </section>
+
+      {/* SHOW INFO */}
+      <section className="border-y border-gold/20 bg-burgundy-deep/70">
+        <div className="mx-auto grid max-w-6xl gap-6 px-5 py-7 md:grid-cols-[1fr_auto_auto_auto] md:items-center md:gap-8 md:px-8 md:py-8">
+          <div>
+            <p className="eyebrow">Perde Açılıyor</p>
+            <h2 className="font-display mt-2 text-2xl text-cream md:text-3xl">
+              Oyunu yerinde keşfedin.
+            </h2>
+          </div>
+          <div className="flex items-center gap-3 text-sm text-cream/80">
+            <CalendarDays className="h-5 w-5 text-gold" />
+            <span>2026 sezonu · 70 dakika</span>
+          </div>
+          <div className="flex items-center gap-3 text-sm text-cream/80">
+            <MapPin className="h-5 w-5 text-gold" />
+            <span>Boğaziçi Kültür Sanat Merkezi</span>
+          </div>
+          <a
+            href="/oyun-hakkinda#bilgiler"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gold px-5 text-xs font-bold tracking-[0.16em] text-accent-foreground uppercase transition-colors hover:bg-gold-soft"
+          >
+            Gösterim bilgileri <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </section>
 
@@ -121,6 +150,35 @@ function Index() {
         </div>
       </section>
 
+      {/* MUSIC */}
+      <section id="oyun-muzigi" className="mx-auto mt-24 max-w-6xl px-5 md:px-8">
+        <div className="grain relative overflow-hidden rounded-2xl border border-gold/20 bg-stage-elevated p-6 md:flex md:items-center md:justify-between md:gap-12 md:p-10">
+          <div className="relative flex items-start gap-4">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-burgundy text-gold">
+              <Music2 className="h-5 w-5" />
+            </span>
+            <div>
+              <p className="eyebrow">Oyunun Sesi</p>
+              <h2 className="font-display mt-2 text-3xl text-cream md:text-4xl">
+                Perde açılmadan dinle.
+              </h2>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                Katakulli'nin müziğiyle oyunun dünyasına biraz daha yaklaş. Sağ alttaki oynatıcıyla
+                sayfayı gezerken de dinlemeye devam edebilirsin.
+              </p>
+            </div>
+          </div>
+          <audio
+            className="relative mt-6 w-full accent-gold md:mt-0 md:w-[min(100%,24rem)]"
+            controls
+            preload="metadata"
+          >
+            <source src={`${import.meta.env.BASE_URL}katakulli-sarkisi.mpeg`} type="audio/mpeg" />
+            Tarayıcınız ses oynatmayı desteklemiyor.
+          </audio>
+        </div>
+      </section>
+
       {/* CAST */}
       <section className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="flex items-end justify-between gap-6">
@@ -149,7 +207,10 @@ function Index() {
       <section className="mx-auto mt-24 max-w-6xl px-5 md:px-8">
         <div className="flex items-end justify-between gap-6">
           <SectionHeading eyebrow="Yapım Ekibi" title="Perde arkası" />
-          <Link to="/ekip" className="hidden shrink-0 text-xs font-semibold tracking-[0.28em] text-gold uppercase sm:block">
+          <Link
+            to="/ekip"
+            className="hidden shrink-0 text-xs font-semibold tracking-[0.28em] text-gold uppercase sm:block"
+          >
             Tümünü gör →
           </Link>
         </div>

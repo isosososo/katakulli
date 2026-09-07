@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import heroPoster from "@/assets/hero-poster.jpg";
 import fes from "@/assets/fes.png";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -49,7 +50,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">Bu sayfa yüklenemedi</h1>
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">
+          Bu sayfa yüklenemedi
+        </h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Bir şeyler ters gitti. Yenilemeyi deneyebilir ya da ana sayfaya dönebilirsiniz.
         </p>
@@ -82,12 +85,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { name: "theme-color", content: "#1a1112" },
       { title: "Katakulli — Sarıyer Belediyesi Tiyatrosu" },
-      { name: "description", content: "Katakulli: 1920'lerin başında geçen, 70 dakikalık müzikli komedi." },
+      {
+        name: "description",
+        content: "Katakulli: 1920'lerin başında geçen, 70 dakikalık müzikli komedi.",
+      },
       { name: "author", content: "Sarıyer Belediyesi Tiyatrosu" },
       { property: "og:site_name", content: "Katakulli" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "tr_TR" },
+      { property: "og:image", content: heroPoster },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: heroPoster },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -126,10 +134,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {isAdmin ? <AdminPanel /> : (
+      {isAdmin ? (
+        <AdminPanel />
+      ) : (
         <>
           <SiteHeader />
-          <main className="min-h-screen"><Outlet /></main>
+          <main className="min-h-screen">
+            <Outlet />
+          </main>
           <SiteFooter />
           <MusicPlayer />
         </>

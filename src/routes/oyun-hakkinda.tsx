@@ -25,7 +25,11 @@ const facts = [
   { k: "Tür", v: "Komedi" },
   { k: "Süre", v: "70 dakika" },
   { k: "Sezon", v: "2026" },
-  { k: "Sahne", v: "Boğaziçi Kültür Sanat Merkezi", href: "https://share.google/bzD6k281L4Dqp5pjO" },
+  {
+    k: "Sahne",
+    v: "Boğaziçi Kültür Sanat Merkezi",
+    href: "https://share.google/bzD6k281L4Dqp5pjO",
+  },
 ];
 
 function AboutPage() {
@@ -54,22 +58,26 @@ function AboutPage() {
         <div className="mt-12 grid gap-12 md:grid-cols-[1fr_320px] md:gap-16">
           <div className="space-y-6 text-base leading-relaxed text-cream/85 md:text-lg">
             <p className="font-display text-2xl leading-snug text-cream md:text-3xl">
-              "Katakulli" — evliliklerin henüz resmî nikâhla yapılmadığı bir dönemde, aile hesaplarının birbirine
-              karıştığı müzikli ve bol kahkahalı bir hikâye.
+              "Katakulli" — evliliklerin henüz resmî nikâhla yapılmadığı bir dönemde, aile
+              hesaplarının birbirine karıştığı müzikli ve bol kahkahalı bir hikâye.
             </p>
             <p>
-              Hafize'nin iki oğlu vardır: Hafız Servet ve Ali Osman. Büyük oğul Hafız Servet hafızlık yapmak için
-              Katar'a gitmiştir. Küçük oğul Ali Osman ise çalışıp borçlarını ödemek yerine, abisinin kazanıp getireceği
-              parayla kurtulmanın hesabını yapmaktadır.
+              Hafize'nin iki oğlu vardır: Hafız Servet ve Ali Osman. Büyük oğul Hafız Servet
+              hafızlık yapmak için Katar'a gitmiştir. Küçük oğul Ali Osman ise çalışıp borçlarını
+              ödemek yerine, abisinin kazanıp getireceği parayla kurtulmanın hesabını yapmaktadır.
             </p>
             <p>
-              Ali Osman'ın çevirdiği türlü katakulliler; abisi Hafız Servet ile Melek'in evliliğinden, Kambur Hasan'ın
-              hesaplarına ve Mahidevran Hanım ile Gonca'nın beklentilerine kadar herkesi içine çeken büyük bir
-              karmaşaya dönüşür. Bir sorun çözülmeden yenisi çıkar; her hesap başka bir hesabı bozar.
+              Ali Osman'ın çevirdiği türlü katakulliler; abisi Hafız Servet ile Melek'in
+              evliliğinden, Kambur Hasan'ın hesaplarına ve Mahidevran Hanım ile Gonca'nın
+              beklentilerine kadar herkesi içine çeken büyük bir karmaşaya dönüşür. Bir sorun
+              çözülmeden yenisi çıkar; her hesap başka bir hesabı bozar.
             </p>
           </div>
 
-          <aside className="h-fit rounded-2xl border border-border bg-card p-6">
+          <aside
+            id="bilgiler"
+            className="scroll-mt-24 h-fit rounded-2xl border border-border bg-card p-6"
+          >
             <img src={fes} alt="" width={72} height={72} loading="lazy" className="h-16 w-16" />
             <dl className="mt-6 space-y-4">
               {facts.map((f) => (
@@ -77,7 +85,12 @@ function AboutPage() {
                   <dt className="text-[0.62rem] tracking-[0.3em] text-gold uppercase">{f.k}</dt>
                   <dd className="font-display mt-1 text-lg text-cream">
                     {f.href ? (
-                      <a href={f.href} target="_blank" rel="noreferrer" className="underline decoration-gold/60 underline-offset-4">
+                      <a
+                        href={f.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline decoration-gold/60 underline-offset-4"
+                      >
                         {f.v}
                       </a>
                     ) : (
