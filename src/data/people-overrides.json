@@ -519,7 +519,7 @@
     },
     {
       "slug": "selin-aydogdu",
-      "name": "Selin Aydoğdu",
+      "name": "Selin Sude Aydoğdu",
       "role": "Afiş Tasarımı",
       "short": "Katakulli'nin görsel kimliğini tasarlıyor.",
       "bio": [
@@ -529,7 +529,8 @@
       "stage": [],
       "other": [],
       "katakulli": "Oyunun afiş tasarımını gerçekleştiriyor.",
-      "socials": []
+      "socials": [],
+      "photo": "/uploads/selin-sude-aydogdu.png"
     }
   ]
 }
